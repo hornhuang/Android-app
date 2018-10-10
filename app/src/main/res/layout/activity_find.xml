@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Find">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/lvyou"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </WebView>
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/setting_bg">
+
+        <ImageView
+        android:id="@+id/tianqi"
+
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+        <Button
+            android:layout_marginTop="300dp"
+            android:id="@+id/fin_side_taobao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/fing_taobao"
+            android:text="  淘宝"
+            android:textSize="15sp"
+            android:background="#26c0c0c0"/>
+
+        <Button
+            android:layout_below="@id/fin_side_taobao"
+            android:id="@+id/fin_side_jingdong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/find_jingdong"
+            android:text="  京东"
+            android:textSize="15sp"
+            android:background="#26c0c0c0"/>
+
+        <Button
+            android:id="@+id/fin_side_zhidao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/find_zhidao"
+            android:text="  知道"
+            android:textSize="15sp"
+            android:background="#26c0c0c0"
+            android:layout_below="@id/fin_side_jingdong"/>
+
+        <Button
+            android:layout_below="@id/fin_side_zhidao"
+            android:id="@+id/fin_side_tieba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/fing_baidu"
+            android:text="  贴吧"
+            android:textSize="15sp"
+            android:background="#26c0c0c0"/>
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+        <!--<ImageView-->
+            <!--android:id="@+id/tianqi"-->
+
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="200dp" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/taobao"-->
+            <!--android:text="          淘 宝"-->
+            <!--android:textSize="25dp"-->
+            <!--android:layout_below="@+id/tianqi"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+        <!--<View-->
+            <!--android:layout_marginTop="236dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="#fff"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/jingdong"-->
+            <!--android:layout_marginTop="335dp"-->
+            <!--android:text="           京东"-->
+            <!--android:textSize="25dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+        <!--<View-->
+            <!--android:layout_marginTop="261dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="#fff"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/zhidao"-->
+            <!--android:layout_marginTop="285dp"-->
+            <!--android:textSize="25dp"-->
+            <!--android:text="         百度知道"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+        <!--<View-->
+            <!--android:layout_marginTop="311dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="#fff"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/tieba"-->
+            <!--android:textSize="25dp"-->
+            <!--android:layout_marginTop="310dp"-->
+            <!--android:text="         百度贴吧"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+        <!--<View-->
+            <!--android:layout_marginTop="337dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="#fff"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_below="@id/tianqi"-->
+            <!--android:background="@drawable/fing_taobao"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp" />-->
+        <!--<ImageView-->
+            <!--android:background="@drawable/find_jingdong"-->
+            <!--android:layout_marginTop="250dp"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp" />-->
+        <!--<ImageView-->
+            <!--android:background="@drawable/find_zhidao"-->
+            <!--android:layout_marginTop="285dp"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp" />-->
+        <!--<ImageView-->
+            <!--android:background="@drawable/fing_baidu"-->
+            <!--android:layout_marginTop="310dp"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp" />-->
+
+
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

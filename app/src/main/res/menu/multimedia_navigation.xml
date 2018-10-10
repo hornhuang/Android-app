@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/farm"
+        android:icon="@drawable/multimedia_book_1st"
+        android:title="Farm" />
+
+    <item
+        android:id="@+id/video"
+        android:icon="@drawable/multimedia_video_1st"
+        android:title="Video" />
+
+    <item
+        android:id="@+id/song"
+        android:icon="@drawable/multimedia_music_1st"
+        android:title="Song" />
+
+</menu>

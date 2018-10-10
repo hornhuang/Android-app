@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#bfFF4081" />
+
+
+    <RelativeLayout
+        android:id="@+id/roll_container"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <com.jude.rollviewpager.RollPagerView
+            android:id="@+id/roll_view_pager"
+            android:layout_width="350dp"
+            android:layout_height="125dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="top"
+            app:rollviewpager_play_delay="2000"
+            android:background="#ffc0c0c0"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/world_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/roll_container">
+
+        <ImageButton
+            android:id="@+id/multimedia_camera_rankings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/environment_center_1st"
+            android:background="#00000000"/>
+
+        <ImageButton
+            android:id="@+id/multimedia_camera_classification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/environment_center_3st"
+            android:background="#00000000"/>
+
+        <ImageButton
+            android:id="@+id/multimedia_camera_special"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/environment_center_2st"
+            android:background="#00000000"/>
+
+        <ImageButton
+            android:id="@+id/multimedia_camera_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/environment_center_4st"
+            android:background="#00000000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/world_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_below="@id/world_head">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/world_bottom_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/world_bottom_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

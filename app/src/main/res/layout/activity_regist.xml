@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistActivity"
+    android:background="@drawable/zanding">
+
+    <EditText
+        android:id="@+id/et_regist_user"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="用户名"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="226dp"
+        android:textColorHint="#bfffffff" />
+
+    <EditText
+        android:id="@+id/et_regist_password"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="208dp"
+        android:hint="密码"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="157dp"
+        android:textColorHint="#bfffffff" />
+
+    <Button
+        android:id="@+id/bt_regist_save"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="122dp"
+        android:background="#66FF4081"
+        android:text="保存"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <Button
+        android:id="@+id/bt_regist_cancel"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:background="#66FF4081"
+        android:text="取消"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="306dp" />
+</RelativeLayout>

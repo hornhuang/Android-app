@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="6dp">
+
+
+
+    <LinearLayout
+        android:id="@+id/environment_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#80FF4081">
+
+        <ImageView
+            android:id="@+id/WorldTop_image"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:background="#ff555555"/>
+
+        <TextView
+            android:id="@+id/WorldTop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#b3000000"
+            />
+    </LinearLayout>
+
+
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sht.homework">
+
+    <!-- 允许联网 -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 获取wifi网络状态的信息 -->
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_ofall"
+        android:label=""
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".StartActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Multimedia"
+            android:label="@string/title_activity_multimedia" />
+        <activity android:name=".Web" />
+        <activity android:name=".TiebaActivity" />
+        <activity android:name=".ZhihuActivity" />
+        <activity android:name=".JqActivity" />
+        <activity android:name=".RegistActivity" />
+        <activity android:name=".TakePhoto" />
+        <activity android:name=".Find" />
+        <activity android:name=".JingDong" />
+        <activity android:name=".TaoBao" />
+        <activity android:name=".Toolbar_eat" />
+        <activity android:name=".Toolbar_game" />
+        <activity android:name=".Toolbar_hlju" />
+        <activity android:name=".Music.MusicFirst" />
+        <activity android:name=".Music.MusicSecond" />
+        <activity android:name=".Music.MusicThird" />
+        <activity android:name=".Music.MusicForth" />
+        <activity android:name=".EnvironmentCenter.IRemenber" />
+        <activity android:name=".EnvironmentCenter.CSDN" />
+        <activity android:name=".MainSide.XinLanWeiBo" />
+        <activity android:name=".EnvironmentCenter.Microsoft" />
+        <activity android:name=".EnvironmentCenter.Pexels" />
+        <activity android:name=".MainSide.KeXie" />
+        <activity android:name=".MainSide.NanFangZhouMo" />
+        <activity android:name=".MainSide.TexntMaps"></activity>
+    </application>
+
+</manifest>

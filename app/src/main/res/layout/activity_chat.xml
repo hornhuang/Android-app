@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/chat_top">
+
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/chat_baidubaike"
+            app:layout_scrollFlags="scroll|enterAlways|snap" />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/cgat_douban"
+            app:layout_anchorGravity="top|right"
+            app:layout_scrollFlags="scroll|enterAlways|snap" />
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/chat_irobot"
+            app:layout_scrollFlags="scroll|enterAlways|snap" />
+
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- 这个FrameLayout就是提供给你的那些Fragment显示内容的布局 -->
+        <FrameLayout
+            android:id="@+id/your_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 这里的WebView就是其中一个Fragment的布局文件中的内容，为了展示就简单点写，fragment的主要内容直接放到这里了 -->
+            <WebView
+                android:id="@+id/qwe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

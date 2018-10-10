@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/save_environment"
+        android:icon="@drawable/environment_icon_1st"
+        android:title="environment" />
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/chat_1st"
+        android:title="chat" />
+
+    <item
+        android:id="@+id/multimedia"
+        android:icon="@drawable/multimedia_1st"
+        android:title="multimedia" />
+
+    <item
+        android:id="@+id/find"
+        android:icon="@drawable/find_1st"
+        android:title="find" />
+
+</menu>

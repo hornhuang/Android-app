@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity"
+    android:background="@drawable/boat">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_1st" />
+
+    <TextView
+        android:id="@+id/tv_regist"
+        android:layout_width="115dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="#00000000"
+        android:text="   没有账户？/注册"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="69dp"
+        android:background="#66FF4081"
+        android:text="登录" />
+
+    <EditText
+        android:id="@+id/et_login_user"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="184dp"
+        android:textColorHint="#bfffffff"
+        android:hint="用户名" />
+
+    <EditText
+        android:id="@+id/et_login_password"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_login_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-184dp"
+        android:textColorHint="#bfffffff"
+        android:hint="密码" />
+
+
+</RelativeLayout>
