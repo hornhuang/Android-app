@@ -1,99 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#bfFF4081" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
 
-    <RelativeLayout
-        android:id="@+id/roll_container"
-        android:layout_width="match_parent"
-        android:layout_height="130dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <com.jude.rollviewpager.RollPagerView
-            android:id="@+id/roll_view_pager"
-            android:layout_width="350dp"
-            android:layout_height="125dp"
-            android:layout_centerInParent="true"
-            android:layout_gravity="top"
-            app:rollviewpager_play_delay="2000"
-            android:background="#ffc0c0c0"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="#ffde4037" />
 
-    </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/world_head"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:layout_below="@+id/roll_container">
+                <RelativeLayout
+                    android:id="@+id/roll_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:gravity="top">
 
-        <ImageButton
-            android:id="@+id/multimedia_camera_rankings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/environment_center_1st"
-            android:background="#00000000"/>
+                    <LinearLayout
+                        android:id="@+id/environment_top_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/multimedia_camera_classification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/environment_center_3st"
-            android:background="#00000000"/>
+                        <TextView
+                            android:id="@+id/environment_eat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="推荐"
+                            android:layout_weight="1"
+                            android:textColor="#ffffffff"
+                            android:textSize="15sp"/>
 
-        <ImageButton
-            android:id="@+id/multimedia_camera_special"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/environment_center_2st"
-            android:background="#00000000"/>
+                        <TextView
+                            android:id="@+id/environment_game"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="国内"
+                            android:layout_weight="1"
+                            android:textColor="#99ffffff"
+                            android:textSize="15sp"/>
 
-        <ImageButton
-            android:id="@+id/multimedia_camera_mine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/environment_center_4st"
-            android:background="#00000000"/>
+                        <TextView
+                            android:id="@+id/environment_hlju"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="国外"
+                            android:layout_weight="1"
+                            android:textColor="#99ffffff"
+                            android:textSize="15sp"/>
 
-    </LinearLayout>
+                    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/world_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="5dp"
-        android:layout_below="@id/world_head">
+                    <com.jude.rollviewpager.RollPagerView
+                        android:id="@+id/roll_view_pager"
+                        android:layout_width="350dp"
+                        android:layout_height="145dp"
+                        android:layout_centerInParent="true"
+                        android:layout_below="@id/environment_top_fragment"
+                        android:background="#ffc0c0c0"
+                        app:rollviewpager_play_delay="2000"/>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_bottom_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+                </RelativeLayout>
 
-        <ImageView
-            android:id="@+id/world_bottom_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/en_center_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:background="#00000000"
+                    android:layout_below="@+id/roll_container"/>
 
-        <TextView
-            android:id="@+id/world_bottom_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginTop="10dp"/>
 
-    </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/world_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/en_center_1">
 
-</RelativeLayout>
+                    <ImageButton
+                        android:id="@+id/multimedia_camera_rankings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:scaleType="center"
+                        android:src="@drawable/environment_center_1st"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/multimedia_camera_classification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:scaleType="center"
+                        android:src="@drawable/environment_center_2st" />
+
+                    <ImageButton
+                        android:id="@+id/multimedia_camera_special"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:scaleType="center"
+                        android:src="@drawable/environment_center_3st"
+                        android:background="#00000000"/>
+
+                    <ImageButton
+                        android:id="@+id/multimedia_camera_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:scaleType="center"
+                        android:background="#00000000"
+                        android:src="@drawable/environment_center_4st" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/button_explain"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/world_head">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="   大数据"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=" 人工智能"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="网页开发"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="移动开发"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/en_center_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="#00000000"
+                    android:layout_below="@id/button_explain">
+                </TextView>
+
+
+                <RelativeLayout
+                    android:id="@+id/button_cut_of_rule"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/en_center_2"
+                    android:background="#30c0c0c0">
+                </RelativeLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_bottom_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/button_cut_of_rule">
+
+                    </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

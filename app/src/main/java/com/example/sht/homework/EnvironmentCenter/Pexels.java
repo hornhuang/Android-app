@@ -22,7 +22,7 @@ public class Pexels extends AppCompatActivity {
         final WebView webView = (WebView) findViewById(R.id.web_pexels);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://www.pexels.com/");
+        webView.loadUrl("http://www.mob.com/");
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setSupportZoom(true);
@@ -53,6 +53,7 @@ public class Pexels extends AppCompatActivity {
             }
 
         });
+        webView.setInitialScale(70);
 
     }
 }

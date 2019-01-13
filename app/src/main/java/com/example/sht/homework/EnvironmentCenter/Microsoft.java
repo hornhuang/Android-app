@@ -21,7 +21,7 @@ public class Microsoft extends AppCompatActivity {
         final WebView webView = (WebView) findViewById(R.id.web_mincrodoft);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://www.microsoft.com/en-sg/");
+        webView.loadUrl("http://bigdata.qq.com/");
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setSupportZoom(true);
@@ -52,6 +52,7 @@ public class Microsoft extends AppCompatActivity {
             }
 
         });
+        webView.setInitialScale(70);
 
     }
 }

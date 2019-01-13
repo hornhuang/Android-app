@@ -46,7 +46,7 @@ public class Multimedia_Farm extends Fragment {
                 return true;
             }
         });
-        webView.loadUrl("https://m.qidian.com/");
+        webView.loadUrl("https://m.runoob.com");
         webView.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -72,6 +72,7 @@ public class Multimedia_Farm extends Fragment {
             }
 
         });
+//        webView.setInitialScale(70);
 
     }
 }

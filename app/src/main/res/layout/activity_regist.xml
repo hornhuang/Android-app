@@ -36,7 +36,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="122dp"
-        android:background="#66FF4081"
+        android:background="#de4037"
         android:text="保存"
         tools:layout_editor_absoluteX="81dp"
         tools:layout_editor_absoluteY="306dp" />
@@ -48,7 +48,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="41dp"
-        android:background="#66FF4081"
+        android:background="#de4037"
         android:text="取消"
         tools:layout_editor_absoluteX="215dp"
         tools:layout_editor_absoluteY="306dp" />

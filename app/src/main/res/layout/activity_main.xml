@@ -22,107 +22,111 @@
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="#bfFF4081" >
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#ffde4037"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
 
-                <TextView
-                    android:layout_width="45dp"
-                    android:layout_height="match_parent" />
-
-                <ImageButton
-                    android:id="@+id/toolbar_eat"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/main_food_1st"
-                    android:background="#00000000"/>
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/search"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="10"
+                        android:background="@drawable/shape_button_1"
+                        android:src="@drawable/search"
+                        android:foregroundGravity="left" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/toolbar_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:src="@drawable/main_qr_code_1st"
+                            android:background="#00000000"
+                            android:scaleType="fitXY"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
 
 
 
-                <ImageButton
-                    android:id="@+id/toolbar_hlju"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/hlju_1st"
-                    android:background="#00000000"/>
-
-                <ImageButton
-                    android:id="@+id/toolbar_game"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/main_game_1st"
-                    android:background="#00000000"/>
-
-                <TextView
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent" />
-
-                <ImageButton
-                    android:id="@+id/toolbar_code"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/main_qr_code_1st"
-                    android:background="#00000000"/>
             </android.support.v7.widget.Toolbar>
 
 
             <FrameLayout
                 android:id="@+id/fragment"
                 android:layout_width="match_parent"
-                android:layout_height="525dp"
+                android:layout_height="0dp"
+                android:layout_weight="11"
                 android:layout_below="@+id/toolbar">
             </FrameLayout>
-
 
             <android.support.design.widget.BottomNavigationView
                 android:id="@+id/navigation"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?android:attr/windowBackground"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#e6ffffff"
                 android:layout_below="@+id/fragment"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:menu="@menu/environment_chat_navigation" />
+                app:menu="@menu/environment_chat_navigation"/>
+
         </LinearLayout>
 
         <RelativeLayout
             android:layout_width="250dp"
             android:layout_height="match_parent"
             android:layout_gravity="left"
-            android:background="@drawable/side_pull_frame_1st">
+            android:background="#ffffffff">
 
             <RelativeLayout
                 android:id="@+id/info_top"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#00000000">
+                android:layout_height="140dp"
+                android:background="#ffde4037">
 
                 <TextView
                     android:id="@+id/icon_top_tool"
                     android:layout_width="match_parent"
-                    android:layout_height="10dp" />
+                    android:layout_height="15dp" />
 
                 <LinearLayout
                     android:id="@+id/side_icon_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:layout_below="@id/icon_top_tool" >
 
                     <TextView
                         android:id="@+id/icon_left_tool"
-                        android:layout_width="10dp"
-                        android:layout_height="120dp"/>
+                        android:layout_width="15dp"
+                        android:layout_height="70dp"/>
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/icon_image"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/boat"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/android_icon"
                         android:background="#00000000"/>
 
                 </LinearLayout>
@@ -132,10 +136,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/side_icon_layout"
-                    android:text=" Mr.Huang"
-                    android:textColor="#ffffffff"
+                    android:text="    水中鱼之1999"
+                    android:textColor="#e6ffffff"
                     android:background="#00000000"
-                    android:textSize="30sp"/>
+                    android:textSize="15sp"/>
 
                 <LinearLayout
                     android:id="@+id/mail_layout"
@@ -150,99 +154,287 @@
                     <TextView
                         android:id="@+id/mail"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Life's a struggle, be willing to do, be happy to bear."
-                        android:textColor="#ffffffff"
+                        android:layout_height="35dp"
+                        android:text="  Life's a struggle, be willing to do, be..."
+                        android:textColor="#80ffffff"
                         android:background="#00000000"
-                        android:textSize="14sp"/>
+                        android:textSize="12.5sp"/>
 
                 </LinearLayout>
 
 
             </RelativeLayout>
 
-            <TextView
-                android:id="@+id/separation_line_1"
-                android:layout_width="250dp"
-                android:layout_height="2dp"
-                android:background="#ffffffff"
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/info_top"
-                android:layout_alignParentRight="true"
-                />
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="动态"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="关注"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="5"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="粉丝"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
 
-            <Button
-                android:id="@+id/q"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/enironment_schedule_1st"
-                android:text="   科协"
-                android:gravity="center_vertical"
-                android:background="#00000000"
-                android:layout_below="@+id/separation_line_1"/>
 
-            <TextView
-                android:id="@+id/separation_line_2"
-                android:layout_width="200dp"
-                android:layout_height="1dp"
-                android:background="#b3ffffff"
-                android:layout_below="@id/q"
-                android:layout_alignParentRight="true"/>
 
-            <Button
-                android:id="@+id/a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/enironment_mail_1st"
-                android:text="   头条"
-                android:gravity="center_vertical"
-                android:background="#00000000"
-                android:layout_below="@+id/separation_line_2"/>
 
-            <TextView
-                android:id="@+id/separation_line_3"
-                android:layout_width="200dp"
-                android:layout_height="1dp"
-                android:background="#b3ffffff"
-                android:layout_below="@id/a"
-                android:layout_alignParentRight="true"/>
 
-            <Button
-                android:id="@+id/z"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/enironment_collection_1st"
-                android:text="   新浪"
-                android:gravity="center_vertical"
-                android:background="#00000000"
-                android:layout_below="@+id/separation_line_3"/>
 
-            <TextView
-                android:id="@+id/separation_line_4"
-                android:layout_width="200dp"
-                android:layout_height="1dp"
-                android:background="#b3ffffff"
-                android:layout_below="@id/z"
-                android:layout_alignParentRight="true"/>
 
-            <Button
-                android:id="@+id/w"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/enironment_welfare_1st"
-                android:text="   地图"
-                android:gravity="center_vertical"
-                android:background="#00000000"
-                android:layout_below="@+id/separation_line_4"/>
 
-            <TextView
-                android:id="@+id/separation_line_5"
-                android:layout_width="200dp"
-                android:layout_height="1dp"
-                android:background="#b3ffffff"
-                android:layout_below="@id/w"
-                android:layout_alignParentRight="true"/>
 
+                <TextView
+                    android:id="@+id/separation_line_1"
+                    android:layout_width="250dp"
+                    android:layout_height="10dp"
+                    android:background="#40c0c0c0"
+                    android:layout_below="@id/info_top"
+                    android:layout_alignParentRight="true"
+                    />
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"/>
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/enironment_schedule_1st"/>
+
+                    <Button
+                        android:id="@+id/q"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="   首页"
+                        android:gravity="center_vertical"
+                        android:background="#00000000"
+                        android:layout_below="@+id/separation_line_1"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/separation_line_2"
+                    android:layout_width="200dp"
+                    android:layout_height="1dp"
+                    android:background="#b3ffffff"
+                    android:layout_alignParentRight="true"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"/>
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/enironment_mail_1st"/>
+
+                    <Button
+                        android:id="@+id/a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="   历史记录"
+                        android:gravity="center_vertical"
+                        android:background="#00000000"
+                        android:layout_below="@+id/separation_line_2"/>
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/separation_line_3"
+                    android:layout_width="200dp"
+                    android:layout_height="1dp"
+                    android:background="#b3ffffff"
+                    android:layout_alignParentRight="true"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"/>
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/enironment_collection_1st"/>
+
+                    <Button
+                        android:id="@+id/z"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="   离线缓存"
+                        android:gravity="center_vertical"
+                        android:background="#00000000"
+                        android:layout_below="@+id/separation_line_3"/>
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/separation_line_4"
+                    android:layout_width="200dp"
+                    android:layout_height="1dp"
+                    android:background="#b3ffffff"
+                    android:layout_alignParentRight="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"/>
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/enironment_welfare_1st"/>
+
+                    <Button
+                        android:id="@+id/w"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="   我的收藏"
+                        android:gravity="center_vertical"
+                        android:background="#00000000"
+                        android:layout_below="@+id/separation_line_4"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/separation_line_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#26c0c0c0"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
 
 
         </RelativeLayout>

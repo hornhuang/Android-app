@@ -33,7 +33,7 @@ public class Multimedia_Video extends Fragment {
                 return true;
             }
         });
-        webView.loadUrl("https://www.iqiyi.com/");
+        webView.loadUrl("https://m.runoob.com/java/java-tutorial.html");
         webView.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {

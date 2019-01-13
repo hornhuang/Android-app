@@ -1,6 +1,7 @@
 package com.example.sht.homework;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -43,12 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new Chat());
                     return true;
                 case R.id.multimedia:
-                    intent  = new Intent(MainActivity.this,Multimedia.class);
-                    startActivity(intent);
-                    return true;
-                case R.id.find:
-                    intent  = new Intent(MainActivity.this,Find.class);
-                    startActivity(intent);
+                    replaceFragment(new Find());
                     return true;
             }
             return false;
@@ -92,32 +88,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        photo.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 
-        ImageButton eat = (ImageButton) findViewById(R.id.toolbar_eat);
-        eat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent  = new Intent(MainActivity.this,Toolbar_eat.class);
-                startActivity(intent);
-            }
-        });
-        ImageButton game = (ImageButton) findViewById(R.id.toolbar_game);
-        game.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent  = new Intent(MainActivity.this,Toolbar_game.class);
-                startActivity(intent);
-            }
-        });
-        ImageButton hlju = (ImageButton) findViewById(R.id.toolbar_hlju);
-        hlju.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent  = new Intent(MainActivity.this,Toolbar_hlju.class);
-                startActivity(intent);
-            }
-        });
 
+
+
+
+        ImageButton q1 = (ImageButton) findViewById(R.id.search);
+        q1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(MainActivity.this,ZhihuActivity.class);
+                startActivity(intent);
+            }
+        });
+        q1.setScaleType(ImageButton.ScaleType.FIT_START);
 
         Button q = (Button) findViewById(R.id.q);
         q.setOnClickListener(new View.OnClickListener() {

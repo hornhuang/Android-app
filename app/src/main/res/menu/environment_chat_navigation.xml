@@ -4,21 +4,18 @@
     <item
         android:id="@+id/save_environment"
         android:icon="@drawable/environment_icon_1st"
-        android:title="environment" />
+        android:title="首页" />
 
     <item
         android:id="@+id/chat"
         android:icon="@drawable/chat_1st"
-        android:title="chat" />
+        android:title="知识" />
 
     <item
         android:id="@+id/multimedia"
         android:icon="@drawable/multimedia_1st"
-        android:title="multimedia" />
+        android:title="我的" />
 
-    <item
-        android:id="@+id/find"
-        android:icon="@drawable/find_1st"
-        android:title="find" />
+
 
 </menu>

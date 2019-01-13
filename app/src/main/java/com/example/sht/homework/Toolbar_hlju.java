@@ -18,7 +18,7 @@ public class Toolbar_hlju extends AppCompatActivity {
         final WebView webView = (WebView) findViewById(R.id.web_hlju);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://baike.baidu.com/item/黑龙江大学/175307?fr=aladdin");
+        webView.loadUrl("https://www.sitepoint.com/community/");
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setSupportZoom(true);

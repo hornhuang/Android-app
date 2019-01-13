@@ -23,7 +23,7 @@ public class CSDN extends AppCompatActivity {
         final WebView webView = (WebView) findViewById(R.id.web_csdn);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://m.csdn.net/");
+        webView.loadUrl("http://www.maiziedu.com/land/ai/");
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setSupportZoom(true);
@@ -54,6 +54,7 @@ public class CSDN extends AppCompatActivity {
             }
 
         });
+        webView.setInitialScale(70);
 
     }
 }

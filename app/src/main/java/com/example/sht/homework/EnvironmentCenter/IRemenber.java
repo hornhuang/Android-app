@@ -21,7 +21,7 @@ public class IRemenber extends AppCompatActivity {
         final WebView webView = (WebView) findViewById(R.id.side_i_remember);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://lifehacker.com/tag/productivity");
+        webView.loadUrl("https://www.uisdc.com/tag/网页设计");
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setSupportZoom(true);
@@ -52,5 +52,6 @@ public class IRemenber extends AppCompatActivity {
             }
 
         });
+        webView.setInitialScale(70);
     }
 }

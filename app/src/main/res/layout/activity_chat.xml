@@ -6,56 +6,119 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <android.support.design.widget.AppBarLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/chat_top">
+        android:layout_height="match_parent">
 
-
-        <ImageView
-            android:id="@+id/image1"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:gravity="center_vertical"
-            android:background="@drawable/chat_baidubaike"
-            app:layout_scrollFlags="scroll|enterAlways|snap" />
-
-        <ImageView
-            android:id="@+id/image2"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:gravity="center_vertical"
-            android:background="@drawable/cgat_douban"
-            app:layout_anchorGravity="top|right"
-            app:layout_scrollFlags="scroll|enterAlways|snap" />
-
-        <ImageView
-            android:id="@+id/image3"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:gravity="center_vertical"
-            android:background="@drawable/chat_irobot"
-            app:layout_scrollFlags="scroll|enterAlways|snap" />
-
-
-    </android.support.design.widget.AppBarLayout>
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <!-- 这个FrameLayout就是提供给你的那些Fragment显示内容的布局 -->
-        <FrameLayout
-            android:id="@+id/your_fragment"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <!-- 这里的WebView就是其中一个Fragment的布局文件中的内容，为了展示就简单点写，fragment的主要内容直接放到这里了 -->
-            <WebView
-                android:id="@+id/qwe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </FrameLayout>
 
-    </android.support.v4.widget.NestedScrollView>
+            <FrameLayout
+                android:id="@+id/chat_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar">
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:background="#ffde4037">
+
+                <Button
+                    android:id="@+id/button_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="推荐专栏"
+                    android:textColor="#ffffffff"
+                    android:background="#00000000"/>
+
+                <Button
+                    android:id="@+id/button_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Java专栏"
+                    android:textColor="#e6ffffff"
+                    android:background="#00000000"/>
+
+                <Button
+                    android:id="@+id/button_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Python专栏"
+                    android:textColor="#e6ffffff"
+                    android:background="#00000000"/>
+
+                <Button
+                    android:id="@+id/button_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C++专栏"
+                    android:textColor="#e6ffffff"
+                    android:background="#00000000"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:background="@drawable/chat_top">-->
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/image1"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:background="@drawable/chat_baidubaike"-->
+            <!--app:layout_scrollFlags="scroll|enterAlways|snap" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/image2"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:background="@drawable/cgat_douban"-->
+            <!--app:layout_anchorGravity="top|right"-->
+            <!--app:layout_scrollFlags="scroll|enterAlways|snap" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/image3"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:background="@drawable/chat_irobot"-->
+            <!--app:layout_scrollFlags="scroll|enterAlways|snap" />-->
+
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+        <!--&lt;!&ndash; 这个FrameLayout就是提供给你的那些Fragment显示内容的布局 &ndash;&gt;-->
+        <!--<FrameLayout-->
+            <!--android:id="@+id/your_fragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <!--&lt;!&ndash; 这里的WebView就是其中一个Fragment的布局文件中的内容，为了展示就简单点写，fragment的主要内容直接放到这里了 &ndash;&gt;-->
+            <!--<WebView-->
+                <!--android:id="@+id/qwe"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
+        <!--</FrameLayout>-->
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
 
 </android.support.design.widget.CoordinatorLayout>

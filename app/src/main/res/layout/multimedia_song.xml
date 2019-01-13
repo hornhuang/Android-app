@@ -2,73 +2,176 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/splash_bg">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
+    <ScrollView
+        android:id="@+id/music_scroll"
         android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="125dp"
-        android:background="#40FF4081" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:background="#40FF4081" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <com.jude.rollviewpager.RollPagerView
-        android:id="@+id/roll_view_pager_song"
-        android:layout_width="350dp"
-        android:layout_height="140dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="top"
-        android:layout_marginTop="19dp"
-        app:rollviewpager_play_delay="2000" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/music_1st"
-        android:layout_width="350dp"
-        android:layout_height="65dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="230dp"
-        android:background="#26c0c0c0"
-        android:gravity="center_vertical"
-        android:text="  追光者"
-        android:textSize="20sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_alignParentTop="true"
+                    android:background="#ffde4037" />
 
-    <Button
-        android:id="@+id/music_2st"
-        android:layout_width="350dp"
-        android:layout_height="65dp"
-        android:layout_below="@+id/music_1st"
-        android:layout_centerHorizontal="true"
-        android:background="#26c0c0c0"
-        android:gravity="center_vertical"
-        android:text="  盗将行"
-        android:textSize="20sp" />
+                <com.jude.rollviewpager.RollPagerView
+                    android:id="@+id/roll_view_pager_song"
+                    android:layout_width="350dp"
+                    android:layout_height="140dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="19dp"
+                    app:rollviewpager_play_delay="2000" />
 
-    <Button
-        android:id="@+id/music_3st"
-        android:layout_width="350dp"
-        android:layout_height="65dp"
-        android:layout_below="@+id/music_2st"
-        android:layout_centerHorizontal="true"
-        android:background="#26c0c0c0"
-        android:gravity="center_vertical"
-        android:text="  离人愁"
-        android:textSize="20sp" />
+            </RelativeLayout>
 
-    <Button
-        android:id="@+id/music_4st"
-        android:layout_width="350dp"
-        android:layout_height="65dp"
-        android:layout_below="@+id/music_3st"
-        android:layout_centerHorizontal="true"
-        android:background="#26c0c0c0"
-        android:gravity="center_vertical"
-        android:text="  七月上"
-        android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/music_1st"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:text="  1    追光者"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ffc0c0c0"/>
+
+                <Button
+                    android:id="@+id/music_2st"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:text="  2    盗将行"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ffc0c0c0"/>
+
+                <Button
+                    android:id="@+id/music_3st"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:text="  3    离人愁"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ffc0c0c0"/>
+
+                <Button
+                    android:id="@+id/music_4st"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:text="  4    七月上"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ffc0c0c0"/>
+
+                <Button
+                    android:id="@+id/music_5st"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:text="  5    在此刻"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ffc0c0c0"/>
+
+                <Button
+                    android:id="@+id/music_6st"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:text="  6    春风十里"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ffc0c0c0"/>
+
+                <Button
+                    android:id="@+id/music_7st"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:text="  6    春风十里"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ffc0c0c0"/>
+
+                <Button
+                    android:id="@+id/music_8st"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:text="  6    春风十里"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ffc0c0c0"/>
+
+                <Button
+                    android:id="@+id/music_9st"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:gravity="center_vertical"
+                    android:text="  6    春风十里"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ffc0c0c0"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </RelativeLayout>

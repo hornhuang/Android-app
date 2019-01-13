@@ -18,7 +18,7 @@ public class Toolbar_game extends AppCompatActivity {
         final WebView webView = (WebView) findViewById(R.id.web_game);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://www.4399.com/");
+        webView.loadUrl("https://www.oschina.net/");
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setSupportZoom(true);
@@ -49,6 +49,7 @@ public class Toolbar_game extends AppCompatActivity {
             }
 
         });
+        webView.setInitialScale(70);
 
     }
 }

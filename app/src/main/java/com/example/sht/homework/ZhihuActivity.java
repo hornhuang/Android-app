@@ -25,13 +25,14 @@ public class ZhihuActivity extends Activity {
             }
         });
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://www.douban.com/");
+        webView.loadUrl("https://m.baidu.com/");
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setSupportZoom(true);
         webView.getSettings().setBuiltInZoomControls(true);
 
         setContentView(webView);
+        webView.setInitialScale(70);
     }
 
     @Override

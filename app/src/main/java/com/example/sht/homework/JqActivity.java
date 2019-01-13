@@ -1,13 +1,18 @@
 package com.example.sht.homework;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -15,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.sht.homework.MainSide.KeXie;
 import com.google.gson.Gson;
 
 
@@ -26,79 +32,50 @@ import java.util.List;
 import java.util.Map;
 
 public class JqActivity extends AppCompatActivity {
-
-    private List<Msg> msgList = new ArrayList<>();
-
-    private EditText inputText;
-
-    private Button send;
-
-    private RecyclerView msgRecyclerView;
-
-    private MsgAdapter adapter;
-
-    private String stringUser;
-
-    private String stringiRobot;
-
-    private Robot robot;
-
-    private int flag = 0;
+    private WebView webView;
+    private long exitTime=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jq);
 
-        inputText = (EditText) findViewById(R.id.input_text);
-        send = (Button) findViewById(R.id.send);
-        msgRecyclerView = (RecyclerView) findViewById(R.id.msg_recycler_view);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        msgRecyclerView.setLayoutManager(layoutManager);
-        adapter = new MsgAdapter(msgList);
-        msgRecyclerView.setAdapter(adapter);
-        send.setOnClickListener(new View.OnClickListener(){
+        final WebView webView = (WebView) findViewById(R.id.j_q_web);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("https://blog.csdn.net/googdev/article/details/51873500");
+
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+
+        webView.setOnKeyListener(new View.OnKeyListener() {
             @Override
-            public void onClick(View view) {
-                String content = inputText.getText().toString();
-                if (!"".equals(content)){
-
-                    RequestQueue mqueue = Volley.newRequestQueue(JqActivity.this);
-                    Map<String,String> params = new HashMap<String, String>();
-                    params.put("key","18e048a4c0654b7e9d1d527999bf5e9e");
-                    params.put("info",content);
-                    params.put("userid","296750");
-                    JSONObject jsonObject = new JSONObject(params);
-                    JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,"http://www.tuling123.com/openapi/api" , jsonObject,
-                            new Response.Listener<JSONObject>() {
-                                @Override
-                                public void onResponse(JSONObject response) {
-                                    Gson gson = new Gson();
-                                    robot =gson.fromJson(response.toString(),Robot.class);
-                                    stringiRobot = (String)  robot.getText();
-                                    Msg msg2 = new Msg(stringiRobot,Msg.TYPE_RECEIVED);
-                                    msgList.add(msg2);
-                                    adapter.notifyItemInserted(msgList.size()-1);
-                                    msgRecyclerView.scrollToPosition(msgList.size()-1);
-                                    inputText.setText("");
-                                }
-                            }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Log.i("TAG", error.getMessage(), error);
-                        }
-                    });
-                    Msg msg = new Msg(content,Msg.TYPE_SENT);
-                    msgList.add(msg);
-                    mqueue.add(jsonObjectRequest);
-                    adapter.notifyItemInserted(msgList.size()-1);
-                    msgRecyclerView.scrollToPosition(msgList.size()-1);
-                    inputText.setText("");
-
-
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+                    if (webView != null && webView.canGoBack()) {
+                        webView.goBack();
+                        return true;
+                    }
                 }
+                if (keyCode == KeyEvent.KEYCODE_BACK
+                        && event.getAction() == KeyEvent.ACTION_DOWN) {
+
+                    if ((System.currentTimeMillis() - exitTime) > 2000) {
+                        Toast.makeText(getApplicationContext(), "再按一次返回上级", Toast.LENGTH_SHORT).show();
+                        exitTime = System.currentTimeMillis();
+                    } else {
+                        finish();
+                        System.exit(0);
+                    }
+                    return true;
+                }
+                return false;
             }
+
         });
+
     }
+
 }
 

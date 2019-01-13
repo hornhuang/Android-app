@@ -1,6 +1,8 @@
 package com.example.sht.homework;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.example.sht.homework.MobileLoad.MobileLoad;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
@@ -21,6 +25,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     TextView tv_regist;
     EditText et_login_user, et_login_password;
     Button bt_login;
+    Button bt_mobile_login;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -31,15 +36,23 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (Build.VERSION.SDK_INT >= 21) {
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+
         setContentView(R.layout.activity_start);
         Bmob.initialize(this, "bd4814e57ed9c8f00aa0d119c5676cf9");
 
         tv_regist = (TextView) findViewById(R.id.tv_regist);
         bt_login = (Button) findViewById(R.id.login);
+        bt_mobile_login = (Button) findViewById(R.id.monile_login);
         et_login_user = (EditText) findViewById(R.id.et_login_user);
         et_login_password = (EditText) findViewById(R.id.et_login_password);
         tv_regist.setOnClickListener(StartActivity.this);
         bt_login.setOnClickListener(StartActivity.this);
+        bt_mobile_login.setOnClickListener(StartActivity.this);
 
     }
 
@@ -51,6 +64,10 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
             case R.id.tv_regist:
                 Intent intent_regist = new Intent(StartActivity.this, RegistActivity.class);
                 startActivity(intent_regist);
+                break;
+            case R.id.monile_login:
+                Intent intent_mobile = new Intent(StartActivity.this, MobileLoad.class);
+                startActivity(intent_mobile);
                 break;
             case R.id.login:
                 String user_num = et_login_user.getText().toString();

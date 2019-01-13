@@ -5,32 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StartActivity"
-    android:background="@drawable/boat">
-
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/main_1st" />
+    android:background="@drawable/start_background">
 
     <TextView
         android:id="@+id/tv_regist"
-        android:layout_width="115dp"
+        android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:background="#00000000"
-        android:text="   没有账户？/注册"/>
+        android:text="   没有账户？/注册"
+        android:textColor="#e6ffffff"/>
 
     <Button
         android:id="@+id/login"
-        android:layout_width="287dp"
-        android:layout_height="wrap_content"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="69dp"
-        android:background="#66FF4081"
-        android:text="登录" />
+        android:layout_marginBottom="95dp"
+        android:background="@drawable/shape_button"
+        android:text="账号登录"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/monile_login"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:textColor="#FFFFFFFF"
+        android:background="@drawable/shape_button"
+        android:textSize="15sp"
+        android:text="手机登录" />
 
     <EditText
         android:id="@+id/et_login_user"
@@ -38,9 +46,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="184dp"
+        android:layout_marginBottom="191dp"
+        android:hint="用户名"
         android:textColorHint="#bfffffff"
-        android:hint="用户名" />
+        android:textColor="#ffffffff"/>
 
     <EditText
         android:id="@+id/et_login_password"
@@ -48,9 +57,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_login_user"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="-184dp"
+        android:layout_marginTop="-191dp"
+        android:hint="密码"
         android:textColorHint="#bfffffff"
-        android:hint="密码" />
+        android:textColor="#ffffffff" />
 
 
 </RelativeLayout>
