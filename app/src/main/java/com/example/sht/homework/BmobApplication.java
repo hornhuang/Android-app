@@ -9,9 +9,7 @@ import cn.bmob.v3.Bmob;
  */
 public class BmobApplication extends Application {
 
-
-
-    public static String APPID = "bd4814e57ed9c8f00aa0d119c5676cf9";
+    public static String APPID = "3e3136ae03c2b1885c95e857c2296a23";
 
     @Override
     public void onCreate() {

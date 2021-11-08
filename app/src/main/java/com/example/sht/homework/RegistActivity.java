@@ -31,11 +31,6 @@ public class RegistActivity extends AppCompatActivity implements View.OnClickLis
         bt_regist_cancel= (Button) findViewById(R.id.bt_regist_cancel);
         bt_regist_save.setOnClickListener(this);
         bt_regist_cancel.setOnClickListener(this);
-
-
-
-
-
     }
 
     @Override
